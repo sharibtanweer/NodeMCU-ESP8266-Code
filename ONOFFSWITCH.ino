@@ -38,7 +38,7 @@ void TestHttpsAPI(){
   std::unique_ptr<BearSSL::WiFiClientSecure>client(new BearSSL::WiFiClientSecure);  
   client->setInsecure();  
   HTTPClient https; 
-  if (https.begin(*client, "https://fullstackoverflow.in/ApplianceControl/iotstatusget.php?key=ACCONT0003")) {
+  if (https.begin(*client, "<<YOUR API>>?key=ACCONT0003")) {
     int httpCode = https.GET(); 
     if (httpCode > 0) { 
       Serial.printf("[HTTPS] GET... code: %d\n", httpCode);
